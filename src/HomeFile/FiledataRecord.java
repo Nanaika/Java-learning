@@ -13,7 +13,7 @@ public class FiledataRecord {
 
         try {
             try {
-                FileWriter fw = new FileWriter("logins5555.txt");
+                FileWriter fw = new FileWriter("logins.txt");
 
 
                 for (int i = 0; i < arrayLogin.length; i++) {
