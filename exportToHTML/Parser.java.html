@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Parser.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c8498d;}
+.s1 { color: #a8afbe;}
+.s2 { color: #ccb86c;}
+.s3 { color: #bb8f73;}
+.s4 { color: #a3ccb5;}
+.s5 { color: #a6aa43;}
+</style>
+</head>
+<body bgcolor="#132623">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Parser.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public class </span><span class="s1">Parser.Parser {</span>
+
+    <span class="s0">private int </span><span class="s1">NumbOfWords(</span><span class="s0">int </span><span class="s1">numbOfWords </span><span class="s2">, </span><span class="s1">String names) {</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s4">; </span><span class="s1">i &lt; names.length()</span><span class="s4">; </span><span class="s1">i++) {</span>
+            <span class="s0">if </span><span class="s1">(names.charAt(i) == </span><span class="s5">','</span><span class="s1">) {</span>
+                <span class="s1">numbOfWords++</span><span class="s4">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s0">return </span><span class="s1">numbOfWords</span><span class="s4">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String[] createArrayOfNames(String names) {</span>
+        <span class="s0">int </span><span class="s1">count = </span><span class="s3">0</span><span class="s4">;</span>
+        <span class="s0">int </span><span class="s1">index = </span><span class="s3">0</span><span class="s4">;</span>
+        <span class="s1">String name = </span><span class="s5">&quot;&quot;</span><span class="s4">;</span>
+        <span class="s0">int </span><span class="s1">numbOfWords = </span><span class="s3">0</span><span class="s4">;</span>
+
+        <span class="s1">numbOfWords = NumbOfWords(numbOfWords </span><span class="s2">, </span><span class="s1">names)</span><span class="s4">;</span>
+
+        <span class="s1">String[] arrayOfNames = </span><span class="s0">new </span><span class="s1">String[numbOfWords + </span><span class="s3">1</span><span class="s1">]</span><span class="s4">;</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">x = count</span><span class="s4">; </span><span class="s1">x &lt; names.length()</span><span class="s4">; </span><span class="s1">x++) {</span>
+            <span class="s0">if </span><span class="s1">(names.charAt(x) != </span><span class="s5">','</span><span class="s1">) {</span>
+                <span class="s1">name += names.charAt(x)</span><span class="s4">;</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">arrayOfNames[index] = name</span><span class="s4">;</span>
+                <span class="s1">index++</span><span class="s4">;</span>
+                <span class="s1">count = x + </span><span class="s3">1</span><span class="s4">;</span>
+                <span class="s1">name = </span><span class="s5">&quot;&quot;</span><span class="s4">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">arrayOfNames[index] = name</span><span class="s4">;</span>
+        <span class="s0">return </span><span class="s1">arrayOfNames</span><span class="s4">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">PrintArrayOfNames(String names) {</span>
+        <span class="s1">String[] array = createArrayOfNames(names)</span><span class="s4">;</span>
+        <span class="s0">for </span><span class="s1">(String s : array) {</span>
+            <span class="s1">System.out.println(s)</span><span class="s4">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

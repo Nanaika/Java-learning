@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"AdvancedParser","l":"AdvancedParser()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"AdvancedParser","l":"numFemByA(String[])","url":"numFemByA(java.lang.String[])"},{"p":"<Unnamed>","c":"AdvancedParser","l":"separateFemaleByA(String)","url":"separateFemaleByA(java.lang.String)"}]
