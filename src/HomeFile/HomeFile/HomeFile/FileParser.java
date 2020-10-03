@@ -7,6 +7,8 @@ import java.io.IOException;
 public class FileParser {
 
 
+
+
     private String[] createStringArray() {
 
         String strFromFile = readFile();
